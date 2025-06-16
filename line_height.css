@@ -1,0 +1,30 @@
+p {
+  margin-top: 30px;
+}
+
+.normal {
+  line-height: 1.5;
+}
+
+.wide {
+  line-height: 2.0;
+}
+.top {
+  margin-top: 50px;
+}
+
+.bottom {
+  margin-bottom: 50px;
+}
+
+.left {
+  margin-left: 50px;
+}
+
+.right {
+  margin-right: 50px;
+}
+
+.all {
+  margin: 50px;
+}

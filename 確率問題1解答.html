@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>解答問題&nbsp;サイコロを3投げた時出た目の積が12の倍数になる確率&nbsp;故に気高い高校数学</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header" class="no-print">
+<input class="no-print" type="submit" value="印刷" onclick="window.print();">
+<button class="no-print" type="button" onclick="location.href='../../word保存用.html'">トップメニューに戻る</button>
+<button class="no-print" type=“button” onclick="location.href='確率問題1.html'">問題へ戻る</button>
+<button class="no-print" type=“button” onclick="location.href='確率問題1.ヒント.html'">ヒントを見てみる</button>
+<button class="no-print" type=“button” onclick="location.href='確率問題1解説.html'">解説へ進む</button>
+</header>
+<div class="content">
+</div>
+
+<p     
+    width:100vmin;
+    hight:100vmin;
+    class="bottom_space"
+    >(問題)
+    <br> 1から6までの目が
+\( \frac{1}{6} \)
+の確率で出るさいころを同時に3個投げるとき, 出た目の積が12の倍数になる確率を求めよ
+</p>
+
+<p     
+    width:100vmin;
+    hight:100vmin;
+    >(解答)
+    <br> サイコロを3回投げるので, 全事象は
+\[6^3\]
+となる. また, 12の倍数になる条件は2の因数を2つ, 3の因数を1つ持つことが条件なので
+出た目の積が12の倍数となる組み合わせは及びその並び替えの数は,
+<br>(2, 2, 3)　\(\frac{3!}{2!×1!}=3 \)
+<br>(2, 2, 6)　\(\frac{3!}{2!×1!}=3 \)
+<br>(2, 6, 1)　\(3!=6\)
+<br>(2, 6, 3)　\(3!=6\)
+<br>(2, 6, 4)　\(3!=6\)
+<br>(2, 6, 5)　\(3!=6\)
+<br>(2, 6, 6)　\(\frac{3!}{2!×1!}=3 \)
+<br>(3, 4, 1)　\(3!=6\)
+<br>(3, 4, 2)　\(3!=6\)
+<br>(3, 4, 3)　\(\frac{3!}{2!×1!}=3 \)
+<br>(3, 4, 4)　\(\frac{3!}{2!×1!}=3 \)
+<br>(3, 4, 5)　\(3!=6\)
+<br>(3, 4, 6)　\(3!=6\)
+<br>(4, 6, 1)　\(3!=6\)
+<br>(4, 6, 4)　\(\frac{3!}{2!×1!}=3 \)
+<br>(4, 6, 5)　\(3!=6\)
+<br>(4, 6, 6)　\(\frac{3!}{2!×1!}=3 \)
+<br>(6, 6, 1)　\(\frac{3!}{2!×1!}=3 \)
+<br>(6, 6, 3)　\(\frac{3!}{2!×1!}=3 \)
+<br>(6, 6, 5)　\(\frac{3!}{2!×1!}=3 \)
+<br>(6, 6, 6)　\(\frac{3!}{3!}=1 \)
+<br>となる. よって, 出た目の積が12の倍数となる組み合わせの数の合計は
+\[3+3+6+6+6+6+3+6+6+3+3+6+6+6+3+6+3+3+3+3+1=91\]
+となる. よって, サイコロを3回投げた時, 出た目の積が12の倍数になる確率は
+\[\frac{91}{216}\]
+となる.
+ <div class="pagebreak"></div>
+</p>
+
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >
+    (答え)
+\[\frac{91}{216}\]
+</p>
+
+
+</body>
+
+
+</html>

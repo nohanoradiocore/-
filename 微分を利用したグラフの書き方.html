@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微分を利用したグラフの書き方</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+</head>
+ 
+ <body>
+ <p
+    width:100vmin;
+    hight:100vmin;
+    >・微分を利用したグラフの書き方
+    <br>1,&nbsp;関数\(f(x)\)を微分し導関数\(f'(x)\)を求める.
+    <br>また,&nbsp;"グラフの凹凸を求めよ"問題文にあれば二階微分\(f''(x)\)も求める
+    <br>2,&nbsp;導関数\(f'(x)=0\)となる\(x\),&nbsp;二階微分\(f''(x)=0\)を求め導関数を書く
+    <br>3,&nbsp;増減表に従って関数を書く
+  </p> 
+
+<script>
+  function sendHeight() {
+    parent.postMessage(
+      {
+        type: 'resize',
+        id: '微分を利用したグラフの書き方',  // ← iframe の id をここで明示する
+        height: document.body.scrollHeight
+      },
+      '*'
+    );
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
+
+
+</body>
+
+
+</html>

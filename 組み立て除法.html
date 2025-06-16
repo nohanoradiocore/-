@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>組み立て除法</title>
+
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+<style>
+  .example {
+    margin: auto;
+    width: fit-content;
+    border-collapse: collapse;
+    text-align: center; 
+  }
+  .example th, .example td {
+    text-align: center;
+    padding: 8px;
+  }
+</style>
+
+
+<style>
+  table.example {
+    border-collapse: collapse;
+  }
+
+  table.example th, table.example td {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc; /* すべてのセルに薄い線（任意） */
+  }
+
+  /* 任意の場所に太線を追加する例 */
+.bottom-border {
+  border-bottom: 3px solid black !important;
+}
+
+.left-border {
+  border-left: 3px solid black !important;
+}
+
+  .right-border {
+    border-right: 3px solid rgb(0, 0, 0);
+  }
+
+  .top-border {
+    border-top: 3px solid rgb(0, 0, 0);
+  }
+</style>
+
+</head>
+
+<body>
+
+  <p
+    width:100vmin;
+    hight:100vmin;
+    >組み立て除法：多項式を1次式で割った場合の商と余りを求める操作
+    <br>1,&nbsp;多項式の係数を次数が大きい順に左から並べる.&nbsp;この時,&nbsp;次数に抜けがある場合はその次数の係数を0とする.
+    <br>2,&nbsp;1次式の1次の係数が1になるように1次の係数で1次式を割る.&nbsp;その後,&nbsp;多項式の係数の一番右に1次式の定数項を並べる.
+    <br>3,&nbsp;一番左の数をそのまま2行降ろす
+    <br>4,&nbsp;一番下の行の数と一次式の定数項を掛け算し,&nbsp;その値と降ろした数の一個左の数を足し1行下に書く.
+    <br>5,&nbsp;4の工程を多項式の係数まで繰り返す.
+    <br>6,&nbsp;一番下の行の右側が余りを表し,&nbsp;左から順に商の次数の高い順の係数を表す.
+    <br>
+    <br>(ex)\(ax^{3}+bx^{2}+cx+d\)を\(px-q\)で割る場合について考える.
+  
+ <br>1,&nbsp;多項式の係数を次数が大きい順に左から並べる.&nbsp;この時,&nbsp;次数に抜けがある場合はその次数の係数を0とする.</p>
+
+ <table class="example" border="0" style="border-collapse: collapse">
+    <tr>
+      <th>\(a\)</th>
+      <th>\(b\)</th>
+      <th>\(c\)</th>
+      <th>\(d\)</th>
+      <th class="bottom-border left-border">&ensp;</th>
+    </tr>
+    <tr class="bottom-border">
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+    <tr>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+  </table>
+
+  <p
+    width:100vmin;
+    hight:100vmin;
+    >  <div class="pagebreak"></div>
+    2,&nbsp;1次式の1次の係数が1になるように1次の係数で1次式を割る.&nbsp;その後,&nbsp;多項式の係数の一番右に1次式の定数項を並べる.
+    <br>\(px-q\)
+  の1次の係数が1になるように式全体を\(p\)で割る.
+ \[px-q=x-\frac{q}{p}\]
+ 多項式の係数の一番右に\(\frac{q}{p}\)を追加する.
+ <br>
+<table class="example" border="0" style="border-collapse: collapse">
+    <tr>
+      <th>\(a\)</th>
+      <th>\(b\)</th>
+      <th>\(c\)</th>
+      <th>\(d\)</th>
+      <th class="bottom-border left-border">\(\frac{q}{p}\)</th>
+</tr>
+    <tr class="bottom-border">
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+    <tr>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+  </table>
+
+</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >3,&nbsp;一番左の数をそのまま2行降ろす
+ 
+<table class="example" border="0" style="border-collapse: collapse">
+    <tr>
+      <th>\(a\)</th>
+      <th>\(b\)</th>
+      <th>\(c\)</th>
+      <th>\(d\)</th>
+      <th class="bottom-border left-border">\(\frac{q}{p}\)</th>
+</tr>
+    <tr class="bottom-border">
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+    <tr>
+      <td>\(a\)</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+  </table>
+</p>
+
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >
+    4,&nbsp;一番下の行の数と一次式の定数項を掛け算し,&nbsp;その値と降ろした数の一個左の数を足し1行下に書く.
+  <table class="example" border="0" style="border-collapse: collapse">
+    <tr>
+      <th>\(a\)</th>
+      <th>\(b\)</th>
+      <th>\(c\)</th>
+      <th>\(d\)</th>
+      <th class="bottom-border left-border">\(\frac{q}{p}\)</th>
+</tr>
+    <tr class="bottom-border">
+      <td>&ensp;</td>
+      <td>\(a×\frac{q}{p}\)</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+    <tr>
+      <td>\(a\)</td>
+      <td>\(b+\frac{aq}{p}\)</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+      <td>&ensp;</td>
+    </tr>
+  </table>
+</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >5,&nbsp;4の工程を多項式の係数まで繰り返す.
+  <table class="example" border="0" style="border-collapse: collapse">
+    <tr>
+      <th>\(a\)</th>
+      <th>\(b\)</th>
+      <th>\(c\)</th>
+      <th>\(d\)</th>
+      <th class="bottom-border left-border">\(\frac{q}{p}\)</th>
+</tr>
+    <tr class="bottom-border">
+      <td>&ensp;</td>
+      <td>\(\frac{aq}{p}\)</td>
+      <td>\(\frac{q}{p}×(b+\frac{aq}{p})\)</td>
+      <td>\(\frac{q}{p}×\{c+(\frac{bq}{p}+\frac{aq^{2}}{p^{2}})\}\)</td>
+      <td>&ensp;</td>
+    </tr>
+    <tr>
+      <td>\(a\)</td>
+      <td>\(b+\frac{aq}{p}\)</td>
+      <td>\(c+(b\frac{q}{p}+\frac{aq^{2}}{p^{2}})\)</td>
+      <td>\(\{\frac{cq}{p}+(\frac{bq^{2}}{p^{2}}+\frac{aq^{3}}{p^{3}})\}\)</td>
+      <td>&ensp;</td>
+    </tr>
+  </table>
+  </p>
+
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >6,&nbsp;一番下の行の右側が余りを表し,&nbsp;左から順に商の次数の高い順の係数を表す.
+この場合の余りは
+\[\{\frac{cq}{p}+(\frac{bq^{2}}{p^{2}}+\frac{aq^{3}}{p^{3}})\}\]
+となり商は
+\[ax^{3}+(b+\frac{aq}{p})x^{2}+\{\frac{cq}{p}+(\frac{bq^{2}}{p^{2}}+\frac{aq^{3}}{p^{3}})\}\]
+となる.
+</p>
+
+
+<script>
+  function sendHeight() {
+    parent.postMessage(
+      {
+        type: 'resize',
+        id: '組み立て除法',  // ← iframe の id をここで明示する
+        height: document.body.scrollHeight
+      },
+      '*'
+    );
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
+
+
+</body>
+
+
+</html>

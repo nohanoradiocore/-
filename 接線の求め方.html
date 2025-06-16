@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>接線の求め方</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+</head>
+ 
+ <body>
+ <p
+    width:100vmin;
+    hight:100vmin;
+    >・接線の方程式の求め方
+    <br>1,&nbsp;関数\(y=f(x)\)の接点の\(x\)座標を\(t\)とする.&nbsp;接点の座標が判明しているなら必要なし.
+    <br>2,&nbsp;\(f(x)\)の導関数\(f'(x)\)を求め,&nbsp;接線の方程式
+    \[y-f(x)=f'(x)(x-t)\]
+    を求める.
+    <br>3,&nbsp;問題文の条件から\(t\)を求め,&nbsp;接線の方程式\(y-f(t)=f'(t)(x-t)\)に求めた\(t\)を代入して接線の方程式を求める
+    <br>(問題文の条件例)
+    <br>接線が通る点が判明している→通る点の座標を接線の方程式\(y-f(t)=f'(t)(x-t)\)に代入する
+    <br>接線の傾きが判明している→接線の傾き\(f'(t)=\)(傾き)から\(t\)を求める
+  </p> 
+
+<script>
+  function sendHeight() {
+    parent.postMessage(
+      {
+        type: 'resize',
+        id: '接線の求め方',  // ← iframe の id をここで明示する
+        height: document.body.scrollHeight
+      },
+      '*'
+    );
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
+
+
+</body>
+
+
+</html>

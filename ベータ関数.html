@@ -1,0 +1,142 @@
+ <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ベータ関数</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+</head>
+ 
+ <body>
+ <p
+    width:100vmin;
+    hight:100vmin;
+    >定積分の面積公式(ベータ関数)
+    <br>交点が\(x=α\),&nbsp;\(x=β\)であり,&nbsp;次数が高い関数の最高次が\(m+n\),&nbsp;最高次係数が\(a\)である
+    2つの関数\(f(x)\)と\(g(x)\)で囲まれる図形の面積
+<br>
+<br>\(x=(β-α)t+α\)とした時
+\[S_m,&nbsp;n=a(β-α)^{m+n+1}\int_0^1 t^{m}(t-1)^{n}dt\]
+となる.
+→\(m\),&nbsp;\(n\)がわかれば積分は容易
+   </p> 
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(導出)
+    <br>\(y=g(x)\)が\(y=f(x)\)の上にある場合(\(g(x) \geq f(x)\))に関数\(f(x)\)と\(g(x)\)で囲まれる図形の面積は,&nbsp;
+    交点が\(x=α\),&nbsp;\(x=β\)である場合
+    \[S_m,n=\int_α^β g(x)-f(x)dx\]
+    となる.&nbsp;この時,&nbsp;\(x=α\),&nbsp;\(x=β\)が交点であるため,&nbsp;関数\(y=f(x)\)と\(y=g(x)\)を連立した式
+    
+\begin{equation}
+\left\{\,
+    \begin{aligned}
+    & y=f(x) \\
+    & y=g(x) \\
+    \end{aligned}
+\right.
+\end{equation}
+\[g(x)-f(x)=0\]
+
+の解が\(x=α\),&nbsp;\(x=β\)である必要がある.&nbsp;この時,&nbsp;関数\(y=f(x)\)と関数\(y=g(x)\)が2交点\(x=α\),&nbsp;\(x=β\)しか持たないのであれば,&nbsp;\(g(x)-f(x)\)が持つ因数は
+\(a\),&nbsp;\((x-α)\),&nbsp;\((x-β)\)のみとなる.
+
+すなわち,&nbsp;次数が高い関数の最高次係数を\(a\)とすると,&nbsp;\(g(x)-f(x)\)は
+\[g(x)-f(x)=a(x-α)^{m}(x-β)^{n}\]
+と変形できる.(この時,\(m\),&nbsp;\(n\)は\(g(x)-f(x)\)の\(x\)の最高次と\(a(x-α)^{m}(x-β)^{n}\)\(x\)の最高次が合うようにするための値)
+<br>この時,&nbsp;関数\(y=g(x)\)と\(y=f(x)\)のうち次数が高いほうの最高次は\(m+n\)をとり,&nbsp;\(m \geq 2\)である時,&nbsp;\(g(x)-f(x)\)は
+\(x=α\)で重解を持つ.
+<br>
+<br>よって,&nbsp;今回の条件を満たす図形の面積は,
+\[S_m,_n=a\int_α^β (x-α)^{m}(x-β)^{n}dx\]
+となる.&nbsp;この時,&nbsp;積分範囲を\(α~β\)から\(0~1\)に変更するために新しい変数\(t\)を導入する.&nbsp;
+初めに積分範囲の下端\(α\)を\(α\)から\(0\)に変更するような変数について考える.&nbsp;変数\(t\)を
+\[t=x-α\]
+とすれば積分範囲の下端\(α\)を\(α\)から\(0\)に変化できる.&nbsp;
+         <div class="pagebreak"></div>
+<br>
+<br>次に,&nbsp;\(t=x-α\)が積分範囲の上端を\(β\)から\(1\)に
+変更できるような形にすることを考える.&nbsp;\(x-α\)を\(β-α\)で割った値を\(t\)とする.&nbsp;すなわち,&nbsp;\(t\)を
+\[t=\frac{x-α}{β-α}\]
+とすれば積分範囲の上端を\(β\)から\(1\)に変更でき,&nbsp;かつ,&nbsp;積分範囲の下端を\(α\)から\(0\)に
+変更できる新しい変数となる.
+\(t=\frac{x-α}{β-α}\)で
+\[S_m,_n=a\int_α^β (x-α)^{m}(x-β)^{n}dx\]
+の\(x\)を置換することを考える.&nbsp;\(t=\frac{x-α}{β-α}\)を\(x\)について解くと
+\[t=\frac{x-α}{β-α}\]
+\[t(β-α)=x-α\]
+\[x=(β-α)t+α\]
+となる.&nbsp;また,&nbsp;\(x=(β-α)t+α\)の両辺を\(t\)で微分すると
+\[\frac{dx}{dt}=(β-α)\]
+\[dx=(β-α)dt\]
+となる.&nbsp;よって,&nbsp;\(S_m,_n=a\int_α^β (x-α)^{m}(x-β)^{n}dx\)を\(t\)で置換すると
+\[S_m,_n=a\int_α^β (x-α)^{m}(x-β)^{n}dx\]
+\[S_m,_n=a\int_0^1 [\{(β-α)t+α\}-α]^{m}[\{(β-α)t+α\}-β]^{n}(β-α)dt\]
+\[S_m,_n=a\int_0^1 \{(β-α)t\}^{m}\{(β-α)t-(β-α)\}^{n}(β-α)dt\]
+\[S_m,_n=a\int_0^1 \{(β-α)t\}^{m}\{(β-α)(t-1)\}^{n}(β-α)dt\]
+\[S_m,_n=a\int_0^1 (β-α)^{m}t^{m}(β-α)^{n}(t-1)^{n}(β-α)dt\]
+\[S_m,_n=a\int_0^1 (β-α)^{m+n+1}t^{m}(t-1)^{n}dt\]
+         <div class="pagebreak"></div>
+\[S_m,_n=a(β-α)^{m+n+1}\int_0^1 t^{m}(t-1)^{n}dt\]
+となる.
+</p>
+
+<script>
+  function sendHeight() {
+    parent.postMessage(
+      {
+        type: 'resize',
+        id: 'ベータ関数',  // ← iframe の id をここで明示する
+        height: document.body.scrollHeight
+      },
+      '*'
+    );
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>関数に囲まれた図形の面積の求め方</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+</head>
+ 
+ <body>
+ <p
+    width:100vmin;
+    hight:100vmin;
+    >関数に囲まれた図形の面積の求め方
+    <br>→基本的に定積分で求める.&nbsp;幾何的な考察も忘れずに.
+    <br>区間\(a\leq x \leq b\)において,&nbsp;関数\(f(x)\)と\(g(x)\)が
+    \[f(x) \geq g(x)\]
+    であるとき,&nbsp;関数\(f(x)\)と\(g(x)\),&nbsp;及び,&nbsp;二直線\(x=a\)と\(x=b\)で囲まれる図形の面積は
+    \[S=\int_{a}^{b}\{f(x)-g(x)\}\]
+   で求められる.
+<br><img src="画像/積分 g(x)-f(x).png" height="200" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+  </p> 
+
+<script>
+  function sendHeight() {
+    parent.postMessage(
+      {
+        type: 'resize',
+        id: '定積分と面積',  // ← iframe の id をここで明示する
+        height: document.body.scrollHeight
+      },
+      '*'
+    );
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
+
+
+</body>
+
+
+</html>

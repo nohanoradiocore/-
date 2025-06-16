@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>故に気高い高校数学</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<style>
+.detail {
+  display: none;
+}
+.toggleText {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+  </style>
+
+</head>
+
+<body>
+
+
+<h1>故に気高い高校数学</h1>
+
+
+<h2 id="titlecolor">作成した問題</h2>
+  <style>
+    #titlecolor {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+  <form action="" method="get">
+  <label>問題名：<input name="problem name"></label>
+  <button type="submit">検索</button>
+</form>
+
+<p>タイトルを押すと関連した問題が表示されます</p>
+
+ <h3 class="toggleText">二次関数の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">三角関数(三角比, 図形の性質を含む)の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">円の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">軌跡, 領域の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">指数関数, 対数関数の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">微分, 積分の問題(数Ⅱ)</h3>
+ <div class="detail">
+  <a href="数学2微分積分問題/数学2微分積分問題2/数学2微分積分問題2.html" target="_blank" rel="noopener">
+    接線と3次関数に囲まれた面積
+  </a>
+ </div>
+
+  <h3 class="toggleText">式と曲線</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">極限</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">微分, 積分の問題(数Ⅲ)</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">式の計算の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">集合と論理の問題</h3>
+ <div class="detail">
+ </div>
+
+<h3 class="toggleText">確率の問題</h3>
+<div class="detail">
+  <a href="確率問題/確率問題1/確率問題1.html" target="_blank" rel="noopener">
+    サイコロを3投げた時出た目の積が12の倍数になる確率
+  </a>
+</div>
+
+
+  <h3 class="toggleText">整数の問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">数列の問題</h3>
+ <div class="detail">
+ </div>
+
+ <h3 class="toggleText">ベクトルの問題</h3>
+ <div class="detail">
+ </div>
+
+  <h3 class="toggleText">複素数平面の問題</h3>
+ <div class="detail">
+ </div>
+
+<script>
+const toggleTexts = document.querySelectorAll('.toggleText');
+const details = document.querySelectorAll('.detail');
+
+toggleTexts.forEach((toggleText, index) => {
+  toggleText.addEventListener('click', () => {
+    const detail = details[index];
+    if (detail.style.display === 'none' || detail.style.display === '') {
+      detail.style.display = 'block';
+    } else {
+      detail.style.display = 'none';
+    }
+  });
+});
+</script>
+
+
+</body>
+
+
+</html>

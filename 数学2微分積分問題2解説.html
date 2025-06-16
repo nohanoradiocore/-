@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>解答問題&nbsp;接線と3次関数に囲まれた面積&nbsp;故に気高い高校数学</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.detail {
+  display: none;
+}
+.toggleText {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+  </style>
+
+<style>
+  .example {
+    margin: auto;
+    width: fit-content;
+    border-collapse: collapse;
+    text-align: center; 
+  }
+  .example th, .example td {
+    text-align: center;
+    padding: 8px;
+  }
+</style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+<style>
+  table.example {
+    border-collapse: collapse;
+  }
+
+  table.example th, table.example td {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc; /* すべてのセルに薄い線（任意） */
+  }
+
+  /* 任意の場所に太線を追加する例 */
+.bottom-border {
+  border-bottom: 3px solid black !important;
+}
+
+.left-border {
+  border-left: 3px solid black !important;
+}
+
+  .right-border {
+    border-right: 3px solid rgb(0, 0, 0);
+  }
+
+  .top-border {
+    border-top: 3px solid rgb(0, 0, 0);
+  }
+</style>
+
+<style>
+  @media print {
+    #hiddenText {
+      display: inherit !important;
+    }
+  }
+</style>
+
+<style>  .underline {
+        text-decoration: underline;
+    }</style>
+
+
+</head>
+
+<body>
+
+<header class="site-header" class="no-print">
+<input class="no-print" type="submit" value="印刷" onclick="window.print();">
+<button class="no-print" type="button" onclick="location.href='../../word保存用.html'">トップメニューに戻る</button>
+<button class="no-print" type=“button” onclick="location.href='数学2微分積分問題2.html'">問題へ戻る</button>
+<button class="no-print" type=“button” onclick="location.href='確率問題1.ヒント.html'">ヒントを見てみる</button>
+<button class="no-print" type=“button” onclick="location.href='数学2微分積分問題2解答.html'">解答へ戻る</button>
+</header>
+<div class="content">
+</div>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(問題)</p>
+<p
+    width:100vmin;
+    hight:100vmin;
+    >関数
+    \[f(x)=x^{3}-2x+2\]
+   について以下の問いに答えよ</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(1)関数
+     \[y=f(x)\]
+    の接線のうち\((2,6)\)を通るものをすべて求めよ</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(2)関数\(y=f(x)\)と接線に囲まれた部分の図形の面積を求めよ</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(1)3次関数の接線を求める問題→微分を利用する.</p>
+
+<iframe  id="接線の求め方" src="../../公式関連/接線の求め方.html"> </iframe>
+
+<script>
+  window.addEventListener('message', function (event) {
+    if (event.data.type === 'resize') {
+      const iframe = document.getElementById(event.data.id);
+      if (iframe) {
+        const newHeight = event.data.height * 1.1;  // ←この部分が問題
+        iframe.style.height = newHeight + 'px';
+      }
+    }
+  });
+</script>
+
+<style>
+    iframe {
+      width: 100%;
+      border: none;
+    }
+  </style>
+
+  <p
+    width:100vmin;
+    hight:100vmin;
+    >1,&nbsp;関数\(y=f(x)\)の接点の\(x\)座標を\(t\)とする.&nbsp;接点の座標が判明しているなら必要なし.
+    <br>
+    <br>関数\(y=f(x)\)の接点の\(x\)座標を\(t\)とする.&nbsp;接点の\(y\)座標は
+    \[f(t)=t^{3}-2t+2\]
+    となる.
+  <div class="pagebreak"></div>
+  </p> 
+
+  <p
+    width:100vmin;
+    hight:100vmin;
+    >2,&nbsp;\(f(x)\)の導関数\(f'(x)\)を求め,&nbsp;接線の方程式\(y-f(x)=f'(x)(x-t)\)を求める.
+<br>
+<br>
+\(f(x)=x^{3}-2x+2\)を微分し接線の傾きを求める. 
+\[f'(x)=3x^{2}-2\]
+より,&nbsp;接点\((t,&nbsp;t^{3}-2t+2)\)における接線の傾きは
+\[f'(t)=3t^{2}-2\]
+となる.&nbsp;よって, 接点\((t,&nbsp;t^{3}-2t+2)\)における接線の方程式は
+\[y-f(t)=f'(t)(x-t)\]
+\[y-(t^{3}-2t+2)=(3t^{2}-2)(x-t)\]
+\[y-(t^{3}-2t+2)=(3t^{2}-2)x-(3t^{2}-2)t\]
+\[y=(3t^{2}-2)x-3t^{3}+2t+(t^{3}-2t+2)\]
+\[y=(3t^{2}-2)x-2t^{3}+2\]
+となる.
+</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >3,&nbsp;問題文の条件から\(t\)を求め,&nbsp;接線の方程式\(y-f(t)=f'(t)(x-t)\)に求めた\(t\)を代入して接線の方程式を求める
+<br>
+<br>今回は接線が\((2,&nbsp;6)\)を通ることが条件なので
+\[y=(3t^{2}-2)x-2t^{3}+2\]
+に\((2,&nbsp;6)\)を代入して\(t\)を求める.
+\[6=(3t^{2}-2)×2-2t^{3}+2\]
+\[6t^{2}-4-2t^{3}+2-6=0\]
+\[-2t^{3}+6t^{2}-8=0\]
+\[t^{3}-3t^{2}+4=0\]
+この時,
+\[t^{3}-3t^{2}+4=0\]
+を満たす\(t\)を有利根定理から求める.<div class="pagebreak"></div>
+
+<iframe  id="有利根定理" src="../../公式関連/有利根定理.html"> </iframe>
+
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >よって, 今回の有理数解の候補は定数項\(4\)の約数が\(1,&nbsp;2,&nbsp;4,&nbsp;-1,&nbsp;-2,&nbsp;-4\)であり最高次係数\(1\)の約数が\(1,&nbsp;-1\)であるため
+    \[\frac{1}{1}=1,&ensp;\frac{2}{1}=2,&ensp;\frac{4}{1}=4,&ensp;\frac{-1}{1}=-1,&ensp;\frac{-2}{1}=-2,&ensp;\frac{-4}{1}=-4,\]
+    の6つとなる. それぞれを\(t^{3}-3t^{2}+4=0\)に代入すると
+\[(1)^{3}-3×(1)^{2}+4=2\]
+\[(2)^{3}-3×(2)^{2}+4=0\]
+\[(4)^{3}-3×(4)^{2}+4=20\]
+\[(-1)^{3}-3×(-1)^{2}+4=0\]
+\[(-2)^{3}-3×(-2)^{2}+4=-16\]
+\[(-4)^{3}-3×(-4)^{2}+4=-108\]
+となる.&nbsp;よって,&nbsp;\(t^{3}-3t^{2}+4=0\)の有理数解は
+\[t=-1,&ensp;t=2\]
+となる.
+&nbsp;\(t+1\)で\(t^{3}-3t^{2}+4\)を割ることで\(t^{3}-3t^{2}+4\)の因数分解をする.&nbsp;この時, <span id="target" class="underline">組み立て除法</span>を用いる.</p> 
+<div id="hiddenText" style="display: none;">
+<iframe  id="組み立て除法" src="../../公式関連/組み立て除法.html"> </iframe>
+</div>
+
+     <div class="pagebreak"></div>
+
+<p width:100vmin; hight:100vmin;>組み立て除法をもちいて計算すると
+    <table class="example" border="0" style="border-collapse: collapse">
+        <tr>
+      <th>\(1\)</th>
+      <th>\(-3\)</th>
+      <th>\(0\)</th>
+      <th>\(4\)</th>
+      <th class="bottom-border left-border">\(-1\)</th>
+</tr>
+    <tr class="bottom-border">
+      <td>&ensp;</td>
+      <td>\(-1\)</td>
+      <td>\(4\)</td>
+      <td>\(4\)</td>
+      <td>&ensp;</td>
+    </tr>
+    <tr>
+      <td>\(1\)</td>
+      <td>\(-4\)</td>
+      <td>\(4\)</td>
+      <td>\(0\)</td>
+      <td>&ensp;</td>
+    </tr>
+  </table>
+
+  となるため,&nbsp;\(t+1\)で\(t^{3}-3t^{2}+4\)を割った時の商は
+  \[t^{2}-4t+4\]
+  となる.&nbsp;すなわち,&nbsp;\(t^{3}-3t^{2}+4\)の因数分解は
+  \[t^{3}-3t^{2}+4=(t+1)(t^{2}-4t+4)\]
+  となる.&nbsp;この時,&nbsp;\(t^{2}-4t+4\)は
+  \[(t^{2}-4t+4)=(t-2)^{2}\]
+  と因数分解できるため
+   \[t^{3}-3t^{2}+4=(t+1)(t-2)^{2}\]
+   となる.&nbsp;よって,
+   \[t^{3}-3t^{2}+4=0\]
+   \[(t+1)(t-2)^{2}=0\]
+   より
+   \[t=-1,&emsp;t=2\]
+   となる.&nbsp;よって,&nbsp;今回の接線の方程式は
+   \[y=(3t^{2}-2)x-2t^{3}+2\]
+   と表せるため&nbsp;\(t=-1\)における接線の方程式は
+   \[y=(3×(-1)^{2}-2)x-2×(-1)^{3}+2\]
+   \[y=(3-2)x+2+2\]
+   \[y=x+4\]
+   となる.&nbsp;また,&nbsp;\(t=2\)における接線の方程式は
+     <div class="pagebreak"></div>
+   \[y=(3×(2)^{2}-2)x-2×(2)^{3}+2\]
+   \[y=(12-2)x-16+2\]
+   \[y=10x-14\]
+   となる.
+  </p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(2)関数\(y=f(x)\)と接線に囲まれた部分の図形の面積を求めよ</p>
+   <p
+    width:100vmin;
+    hight:100vmin;
+    >とりあえずグラフを書いて求める図形の面積を考える.
+     →\(f(x)=x^{3}-2x+2\)のグラフを書く
+  </p>
+
+<iframe  id="微分を利用したグラフの書き方" src="../../公式関連/微分を利用したグラフの書き方.html"> </iframe>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >1,&nbsp;関数\(f(x)\)を微分し導関数\(f'(x)\)を求める. 
+  <br>また,&nbsp;"グラフの凹凸を求めよ"問題文にあれば二階微分\(f''(x)\)も求める.
+<br>関数
+\[f(x)=x^{3}-2x+2\]
+の導関数は(1)より
+\[f'(x)=3x^{2}-2\]
+である.
+</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >
+<br>2,&nbsp;導関数\(f'(x)=0\)となる\(x\),&nbsp;二階微分\(f''(x)=0\)を求め導関数を書く
+\(f'(x)=0\)となる\(x\)を求める.
+\[f'(x)=3x^{2}-2=0\]
+\[(\sqrt{3}x+\sqrt{2})(\sqrt{3}x-\sqrt{2})=0\]
+\[x=\frac{\sqrt{2}}{\sqrt{3}},&emsp;-\frac{\sqrt{2}}{\sqrt{3}}\]
+\[x=\frac{\sqrt{6}}{3},&emsp;-\frac{\sqrt{6}}{3}\]
+</p>
+
+     <div class="pagebreak"></div>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >増減表を書く</p>
+    <table class="example" border="1" style="border-collapse: collapse">
+    <tr>
+      <th>\(x\)</th>
+      <th>・・・</th>
+      <th>\(-\frac{\sqrt{6}}{3}\)</th>
+      <th>・・・</th>
+      <th>\(\frac{\sqrt{6}}{3}\)</th>
+      <th>・・・</th>     
+    </tr>
+    <tr>
+      <td>\(f'(x)\)</td>
+      <td>\(+\)</td>
+      <td>\(0\)</td>
+      <td>\(-\)</td>
+      <td>\(0\)</td>
+      <td>\(+\)</td>
+    </tr>
+    <tr>
+      <td>\(f(x)\)</td>
+      <td>\(\nearrow\)</td>
+      <td>\(\frac{18+4\sqrt{6}}{9}\)</td>
+      <td>\(\searrow\)</td>
+      <td>\(\frac{18-4\sqrt{6}}{9}\)</td>
+      <td>\(\nearrow\)</td>
+    </tr>
+  </table>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >この時,
+    \[f(-\frac{\sqrt{6}}{3})=(-\frac{\sqrt{6}}{3})^{3}-2×(-\frac{\sqrt{6}}{3})+2\]
+    \[f(-\frac{\sqrt{6}}{3})=-\frac{2\sqrt{6}}{9}+\frac{2\sqrt{6}}{3}+2\]
+\[f(-\frac{\sqrt{6}}{3})=\frac{18+4\sqrt{6}}{9}\]
+ <br> 
+ \[f(\frac{\sqrt{6}}{3})=(\frac{\sqrt{6}}{3})^{3}-2×(\frac{\sqrt{6}}{3})+2\]
+\[f(-\frac{\sqrt{6}}{3})=\frac{2\sqrt{6}}{9}-
+\frac{2\sqrt{6}}{3}+2\]
+\[f(-\frac{\sqrt{6}}{3})=\frac{18-4\sqrt{6}}{9}\]
+と計算した.</p>
+
+<p
+width:100vmin;
+hight :100vmin;
+>また, \(f’(x)\)の正負は,&nbsp; \(f’(x)\)のグラフから判断した.</p>
+
+<p
+width:100vmin;
+hight :100vmin;
+> \(f’(x)=3x^{2}-2\)のグラフ
+<br><img src="画像/微分積分問題2.1.png" height="200" alt="\(f’(x)\)のグラフ"  style="display: block; margin: auto;" />
+     <div class="pagebreak"></div>
+<br>→ \(x\leq-\frac{\sqrt{6}}{3}\)では\(f’(x)=3x^{2}-2\)は\(+\)の値を取り
+<br>&emsp; \(-\frac{\sqrt{6}}{3}\leq x\leq \frac{\sqrt{6}}{3}\)では\(f’(x)=3x^{2}-2\)は\(-\)の値を取り
+<br>&emsp; \(\frac{\sqrt{6}}{3}\leq x\)では\(f’(x)=3x^{2}-2\)は\(+\)の値を取る
+</p>
+
+<p
+width:100vmin;
+hight :100vmin;
+>3,&nbsp;増減表に従って関数を書く
+<br>よって,&nbsp;グラフは
+<br><img src="画像/微分積分問題2.2.png" height="400" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+<br>となる.&nbsp;関数\(y=x^{3}-2x+2\)と\(y=x+4\)の接点の\(y\)座標は,&nbsp;接点の\(x\)座標が\(x=-1\)なので\(y=x+4\)に\(x=-1\)を代入した
+\[y=-1+4=3\]
+となる.&nbsp;よって,&nbsp;関数\(y=x^{3}-2x+2\)と\(y=x+4\)の接点の座標は(-1,&nbsp;3)となる.&nbsp;また,&nbsp;
+関数\(y=x^{3}-2x+2\)と\(y=x+4\)の接点\((-1,&nbsp;3)\)以外の交点を求めるためには
+\(y=x^{3}-2x+2\)と\(y=x+4\)の連立方程式を解けばよい.
+
+\begin{equation}
+\left\{\,
+    \begin{aligned}
+    & y=x^{3}-2x+2 \\
+    & y=x+4 \\
+    \end{aligned}
+\right.
+\end{equation}
+
+\[x+4=x^{3}-2x+2\]
+\[x^{3}-3x-2=0\]
+この時,&nbsp;関数\(y=x^{3}-2x+2\)と\(y=x+4\)の接点の\(x\)座標は\(x=-1\)であるので,&nbsp;
+\(x^{3}-3x-2=0\)は,&nbsp;必ず\(x=-1\)を解に持つ.&nbsp;\(x^{3}-3x-2\)を\(x+1\)で割ることで因数分解をする.(組み立て除法等を用いる)
+     <div class="pagebreak"></div>
+\[x^{3}-3x-2=(x+1)(x^{2}-x-2)=(x+1)(x+1)(x-2)=(x+1)^{2}(x-2)\]
+よって,&nbsp;関数\(y=x^{3}-2x+2\)と\(y=x+4\)の接点\((-1,&nbsp;3)\)以外の交点の\(x\)座標は
+\[x=2\]
+となり,&nbsp;その時の\(y\)座標は
+\[y=2+4=6\]
+となる.&nbsp;同様の手順で関数\(y=x^{3}-2x+2\)と\(y=10x-14\)の接点の\(y\)座標を求めると
+\[y=10×2-14=6\]
+となり,&nbsp;接点\((2,&nbsp;6)\)以外の交点の\(x\)座標は
+
+\begin{equation}
+\left\{\,
+    \begin{aligned}
+    & y=x^{3}-2x+2 \\
+    & y=10x-14 \\
+    \end{aligned}
+\right.
+\end{equation}
+
+\[10x-14=x^{3}-2x+2\]
+\[x^{3}-12x+16=0\]
+\[(x+4)(x-2)^{2}=0\]
+\[x=-4,&emsp;x=2\]
+より
+\[x=-4\]
+となる.&nbsp;よって,&nbsp;接点\(2,&nbsp;6\)以外の交点の座標は
+\[y=10×(-4)-14=-54\]
+より\((-4,&nbsp;-54)\)となる
+
+
+<br>よって,&nbsp;今回,&nbsp;面積を求める図形は
+<br><img src="画像/微分積分問題2.3.png" height="200" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+<br>となる.</p>
+     <div class="pagebreak"></div>
+<iframe  id="定積分と面積" src="../../公式関連/定積分と面積.html"> </iframe>
+
+<p
+width:100vmin;
+hight :100vmin;
+>今回の問題では,&nbsp;以下の3つの関数で囲まれた図形の面積を求める必要がある.
+<br>定積分
+    \[S=\int_{a}^{b}\{f(x)-g(x)\}\]
+    はある範囲\(a~b\)において2つの面積で囲まれた図形の面積を求める計算なので,&nbsp;1度の計算で
+    3つの関数に囲まれた面積を求めるのは難しい.
+    <br>→求める面積を分けて考える必要がある.
+    <br>
+    <br>交点での境界を利用して図形を以下のように分割する.
+    <br>区間①：関数\(y=x^{3}-2x+2\)と接線\(y=x+4\)で囲まれた部分
+    <br>区間②：関数\(y=x^{3}-2x+2\)と接線\(y=10x-14\)で囲まれた部分
+    <br>この分割により,&nbsp;それぞれが"ある範囲における2つの関数で囲まれた面積"となり,&nbsp;定積分で計算可能になる.
+         <div class="pagebreak"></div>
+    <br><img src="画像/微分積分問題2.4.png" height="200" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+  </p>
+
+<p
+width:100vmin;
+hight :100vmin;
+>①の面積を求める
+<br><img src="画像/微分積分問題2.5.png" height="200" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+<br>①は,&nbsp;交点\(x=-1\)と\(x=2\)である関数\(y=x^{3}-2x+2\)と関数\(y=x+4\)で囲まれた面積なので①の面積\(S_①\)は
+\[S_①=\int_{-1}^{2} (x+4)-(x^{3}-2x+2)dx\]
+\[S_①=\int_{-1}^{2} -(x^{3}-3x-2)dx\]
+となる.&nbsp;計算すると
+\[S_①=\int_{-1}^{2} -(x^{3}-3x-2)dx\]
+\[S_①=-\bigg[\frac{1}{4}x^{4}-\frac{3}{2}x^{2}-2x\bigg]^2_{-1}\]
+\[S_①=-\bigg[\frac{1}{4}\{2^{4}-(-1)^{4}\}-\frac{3}{2}\{2^{2}-(-1)^{2}\}-2\{2-(-1)\}\bigg]\]
+\[S_①=\frac{27}{4}\]
+となる.</p>
+
+         <div class="pagebreak"></div>
+
+<p
+width:100vmin;
+hight :100vmin;
+>②の面積を求める
+<br><img src="画像/微分積分問題2.6.png" height="200" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+<br>②は,&nbsp;交点\(x=-4\)と\(x=2\)である関数\(y=x^{3}-2x+2\)と関数\(y=10x-14\)で囲まれた面積なので②の面積\(S_②\)は
+\[S_②=\int_{-4}^{2} (x^{3}-2x+2)-(10x-14)dx\]
+\[S_②=\int_{-4}^{2} (x^{3}-12x+16)dx\]
+となる.&nbsp;計算すると
+\[S_②=\int_{-4}^{2} (x^{3}-12x+16)dx\]
+\[S_②=\bigg[\frac{1}{4}x^{4}-\frac{12}{2}x^{2}+16x\bigg]^2_{-4}\]
+\[S_②=\bigg[\frac{1}{4}×\{2^{4}-(-4)^{4}\}+6×\{2^{2}-(-4)^{2}\}+16×\{2-(-4)\}\bigg]\]
+\[S_②=108\]
+となる.&nbsp;よって,&nbsp;今回求める面積\(S\)は
+\[S=\frac{27}{4}+108=\frac{27}{4}+\frac{432}{4}=\frac{459}{4}\]
+となる.</p>
+
+         <div class="pagebreak"></div>
+
+<p
+width:100vmin;
+hight :100vmin;
+>(参考)&emsp;\(\frac{1}{12}\)公式
+<br>3次関数
+\[y=ax^{3}+bx^{2}+cx+d\]
+とその接線
+\[y=ex+d\]
+の交点が\(x=α\),&nbsp;\(x=β\)である時,&nbsp;三次関数\(y=ax^{3}+bx^{2}+cx+d\)と接線\(y=ex+f\)で囲まれる面積\(S\)は
+\[S=\frac{|a|}{12}(β-α)^{4}\]
+となる.
+<br>
+<br>これを用いて,&nbsp;①の面積を求める.
+<br>①の面積は関数\(y=x^{3}-12x+16\)と関数\(y=x+4\)が交点\(x=-1\)と\(x=2\)で囲んだ面積なので\(\frac{1}{12}\)公式より
+\[S_①=\frac{|-1|}{12}\{2-(-1)\}^{4}\]
+\[S_①=\frac{1}{12}(3)^{4}\]
+\[S_①=\frac{1}{12}×81\]
+\[S_①=\frac{27}{4}\]
+となる.</p>
+
+         <div class="pagebreak"></div>
+
+<iframe id="ベータ関数" src="../../公式関連/ベータ関数.html"></iframe>
+
+<p width:100vmin; hight:100vmin;>ベータ関数を用いた面積①の計算
+<br><img src="画像/微分積分問題2.5.png" height="200" alt="\(f(x)\)のグラフ"  style="display: block; margin: auto;" />
+<br>①は,&nbsp;交点が\(x=-1\),&nbsp;\(x=2\)である関数\(y=x^{3}-12x+16\)と関数\(y=x+4\)で囲まれた面積なので
+\[S_①=\int_{-1}^{2} (x+4)-(x^{3}-2x+2)dx\]
+\[S_①=\int_{-1}^{2} -(x^{3}-3x-2)dx\]
+となる.&nbsp;\(y=x+4\)と\(y=x^{3}-2x+2\)は\(x=-1\)と\(x=2\)で交点を持つ.&nbsp;
+また,&nbsp;\(y=x+4\)は\(y=x^{3}-2x+4\)の\(x=1\)における交点である.&nbsp;よって,&nbsp;
+\(x^3-12x+16\)は\(x=-1\)と\(x=2\)を解にもち,&nbsp;\(x=-1\)は重解になる.&nbsp;よって,&nbsp;
+\[S_①=\int_{-1}^{2} -(x^{3}-3x-2)dx=-\int_{-1}^{2} (x+1)^{2}(x-2)dx\]
+と式変形できる.&nbsp;よって,&nbsp;\(a=-1\),&nbsp;\(α=-1\),&nbsp;\(β=2\),&nbsp;\(m=2\),&nbsp;\(n=1\)とすると①の面積は
+\[S_m,&nbsp;n=a(β-α)^{m+n+1}\int_0^1 t^{m}(t-1)^{n}dt\]
+より
+\[S_①=(-1)\{(2)-(-1)\}^{2+1+1}\int_0^1 t^{2}(t-1)^{1}dt\]
+\[S_①=-(3)^{4}\int_0^1 t^{3}-t^{2}dt\]
+\[S_①=-81\bigg[\frac{1}{4}t^{4}-\frac{1}{3}t^{3}\bigg]_0^1\]
+\[S_①=-81(\frac{1}{4}-\frac{1}{3})\]
+\[S_①=-81(-\frac{1}{12})\]
+\[S_①=\frac{27}{4}\]
+となる.
+</p>
+
+<script>
+  const target = document.getElementById('target');
+  const hiddenText = document.getElementById('hiddenText');
+
+  target.addEventListener('click', function() {
+    if (hiddenText.style.display === 'none') {
+      hiddenText.style.display = 'block';
+    } else {
+      hiddenText.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>解答問題&nbsp;接線と3次関数に囲まれた面積&nbsp;故に気高い高校数学</title>
+  <style>
+    h1 {
+      color: rgb(59, 185, 86);
+    }
+  </style>
+
+<link rel="stylesheet" href="../../Css/box.css">
+<link rel ="stylesheet" href="../../CSS/line_height.css">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+
+<style>
+.pagebreak {
+  break-after: page;
+}
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header" class="no-print">
+<input class="no-print" type="submit" value="印刷" onclick="window.print();">
+<button class="no-print" type="button" onclick="location.href='../../word保存用.html'">トップメニューに戻る</button>
+<button class="no-print" type=“button” onclick="location.href='数学2微分積分問題2.html'">問題へ戻る</button>
+<button class="no-print" type=“button” onclick="location.href='確率問題1.ヒント.html'">ヒントを見てみる</button>
+<button class="no-print" type=“button” onclick="location.href='数学2微分積分問題2解説.html'">解説へ進む</button>
+</header>
+<div class="content">
+</div>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(問題)</p>
+<p
+    width:100vmin;
+    hight:100vmin;
+    >関数
+    \[f(x)=x^{3}-2x+2\]
+   について以下の問いに答えよ</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(1)関数
+     \[y=f(x)\]
+    の接線のうち\((2,6)\)を通るものをすべて求めよ</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(2)関数\(y=f(x)\)と接線に囲まれた部分の図形の面積を求めよ</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(解答)</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(1)
+<br>関数\(y=f(x)\)の接点の\(x\)座標を\(t\)とする.&nbsp;そうすると接点の\(y\)座標は
+\[y=f(t)=t^{3}-2t+2\]
+となる.&nbsp;
+\[f'(x)=3x^{2}-2\]
+より, 接点\(t,&nbsp;t^{3}-2t+2\)における接線の傾きは
+\[f'(t)=3t^{2}-2\]
+となる.&nbsp;よって,&nbsp;接点\(t,&nbsp;t^{3}-2t+2\)における接線の方程式は
+\[y-f(t)=f'(t)(x-t)\]
+\[y-(t^{3}-2t+2)=(3t^{2}-2)(x-t)\]
+\[y=(3t^{2}-2)x-2t^{3}+2\]
+となる.&nbsp;今回は\(2,&nbsp;6\)を通ることが条件なので,
+\[y=(3t^{2}-2)x-2t^{3}+2\]  <div class="break-after"></div>
+に\(2,&nbsp;6\)を代入して\(t\)を求める.
+\[6=(3t^{2}-2)×2-2t^{3}+2\]
+\[t^{3}-3t^{2}+4=0\]
+\[(t+1)(t-2)^{2}=0\]
+\[t=-1,&nbsp;2\]
+\(t=-1\)における接線の方程式は
+\[y=(3×(-1)^{2}-2)x-2×(-1)^{3}+2\]
+\[y=x+4\]
+となる.&nbsp;また, \(t=2\)における接線の方程式は
+\[y=(3×(2)^{2}-2)x-2×(2)^{3}+2\]
+\[y=10x-14\]
+となる.
+</p>
+<p>(答え)
+\[y=x+4\]
+\[y=10x-14\]
+</p>
+
+<p
+    width:100vmin;
+    hight:100vmin;
+    >(2)
+    <br>関数\(y=f(x)\)と接線に囲まれた部分の図形の面積を求めよ
+    <br>関数
+    \[f(x)=x^{3}-2x+2\]
+    の導関数は
+    \[f'(x)=3x^{2}-2\]
+    となる.&nbsp;よって,&nbsp;関数
+    \(f(x)=x^{3}-2x+2\)
+    の増減表は
+  
+  <style>
+  .example {
+    margin: auto;
+    width: fit-content;
+    border-collapse: collapse;
+    text-align: center; 
+  }
+  .example th, .example td {
+    text-align: center;
+    padding: 8px;
+  }
+</style>
+
+
+<table class="example" border="1" style="border-collapse: collapse">
+    <tr>
+      <th>\(x\)</th>
+      <th>・・・</th>
+      <th>\(-\frac{\sqrt{6}}{3}\)</th>
+      <th>・・・</th>
+      <th>\(\frac{\sqrt{6}}{3}\)</th>
+      <th>・・・</th>     
+    </tr>
+    <tr>
+      <td>\(f'(x)\)</td>
+      <td>\(+\)</td>
+      <td>\(0\)</td>
+      <td>\(-\)</td>
+      <td>\(0\)</td>
+      <td>\(+\)</td>
+    </tr>
+    <tr>
+      <td>\(f(x)\)</td>
+      <td>\(\nearrow\)</td>
+      <td>\(\frac{18+4\sqrt{6}}{9}\)</td>
+      <td>\(\searrow\)</td>
+      <td>\(\frac{18-4\sqrt{6}}{9}\)</td>
+      <td>\(\nearrow\)</td>
+    </tr>
+  </table>
+  となる.     <div class="break-after"></div>
+  <br>よって,&nbsp;グラフは
+<br><img src="画像/微分積分問題2.2.png" height="400" alt="\(y=x^{3}-2x+2\)のグラフ"  style="display: block; margin: auto;" />
+<br>となる.&nbsp;この時, 求める面積を以下のように分けて考える.
+<br><img src="画像/微分積分問題2.4.png" height="400" alt="\(y=x^{3}-2x+2\)のグラフ"  style="display: block; margin: auto;" />
+<br>①の面積\(S_①\)は交点が\(x=-1\)と\(x=2\)である関数\(y=x^{3}-2x+2\)と関数\(y=x+4\)で囲まれる面積なので
+\[S_①=\int_{-1}^{2} (x+4)-(x^{3}-2x+2)dx\]<div class="pagebreak"></div>
+\[S_①=\int_{-1}^{2} -(x^{3}-3x-2)dx\]
+\[S_①=-\bigg[\frac{1}{4}x^{4}-\frac{3}{2}x^{2}-2x\bigg]^2_{-1}\]
+\[S_①=-\bigg[\frac{1}{4}\{2^{4}-(-1)^{4}\}-\frac{3}{2}\{2^{2}-(-1)^{2}\}-2\{2-(-1)\}\bigg]\]
+\[S_①=\frac{27}{4}\]
+となる.&nbsp;②の面積\(S_②\)は交点が\(x=-4\)と\(x=2\)である関数\(y=x^{3}-2x+2\)と関数\(y=10x-14\)で囲まれる面積なので
+\[S_②=\int_{-4}^{2} (x^{3}-2x+2)-(10x-14)dx\]
+\[S_②=\int_{-4}^{2} (x^{3}-12x+16)dx\]
+\[S_②=\bigg[\frac{1}{4}x^{4}-\frac{12}{2}x^{2}+16x\bigg]^2_{-4}\]
+\[S_②=\bigg[\frac{1}{4}×\{2^{4}-(-4)^{4}\}+6×\{2^{2}-(-4)^{2}\}+16×\{2-(-4)\}\bigg]\]
+\[S_②=\bigg\{\frac{1}{4}×(-240)-6×(-12)+16×(6)\bigg\}\]
+\[S_②=108\]
+となる.&nbsp;よって,&nbsp;今回求める面積\(S\)は
+\[S=\frac{27}{4}+108=\frac{27}{4}+\frac{432}{4}=\frac{459}{4}\]
+となる.
+</p>
+
+<p>(答え)
+\[\frac{459}{4}\]
+</p>
+
+    </body>
+
+
+</html>
